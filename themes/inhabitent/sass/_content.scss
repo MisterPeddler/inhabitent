@@ -4,6 +4,21 @@
 
 /* Posts and pages */
 
+.read-more{
+	text-transform: uppercase;
+	border: 1px solid black;
+	color:black;
+	text-decoration: none;
+	padding: 12px 18px;
+
+	&:hover{
+		background-color: $color__brand-green;
+		color:$color__brand-white;
+		border: 1px solid $color__brand-green;
+	}
+
+}
+
 .sticky {
 	display: block;
 }
@@ -37,6 +52,52 @@
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+/* Sidebar */
+
+#secondary{
+  border-left: 1px solid $color__background-hr;
+  padding-left: 80px;
+}
+
+
+
+/* Footer */
+
+.site-footer{
+
+	background-image: url('../../images/dark-wood.png');
+
+.container{
+	@include container;
+	display:flex;
+	justify-content: space-between;
+
+		.site-info{
+			display:flex;
+			flex-direction: row;
+
+			.widget{
+
+				width:220px;
+
+				h3{
+					color:$color__brand-orange;
+				}
+
+				p{
+					color:$color__background-body;
+				}
+			}
+
+		}
+
+		img{
+				width:280px;
+		}
+
+}
 }
 
 /* Comments */

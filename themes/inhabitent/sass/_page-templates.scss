@@ -3,3 +3,89 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.front-page{
+// display:flex;
+// width:auto;
+  .site-content{
+    // width:auto;
+  }
+
+  .hero{
+    background-image: url('../../images/home-hero.jpg');
+    height:100vh;
+    background-size: cover;
+    // width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+
+/* Home page*/
+
+
+.home{
+
+}
+.site-main:first-child{
+  margin-top: 100px;
+}
+
+.container{
+  @include container;
+  display:flex;
+}
+
+.post{
+  margin-top: 60px;
+    //  width:90%;
+    // border-right: 1px solid $color__brand-light-grey;
+    padding-right: 60px;
+}
+
+.entry-header{
+  position:relative;
+
+  h1{
+    color:white;
+  }
+
+  
+
+  a{
+    color: $color__brand-white;
+    text-decoration: none;
+  }
+
+  .entry-title{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top: 30px;
+    background-color: $color__brand-green;
+    padding: 10px 60px 10px 10px;
+    max-width: 560px;
+    font-size: 2.2rem;
+    line-height: 120%;
+    // font-family: $font__main;
+    text-transform: uppercase;
+  }
+
+  img{
+    width: 760px;
+  }
+}
+
+.entry-content{
+
+p{
+   font-family: $font__pre;
+  line-height: 200%;
+  width:760px;
+}
+
+}

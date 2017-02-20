@@ -38,7 +38,7 @@ gulp.task('scripts', ['lint'], function () {
         .pipe(rename({
             extname: '.min.js'
         }))
-        .pipe(gulp.dest('./build/js'))
+        .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('lint', function () {

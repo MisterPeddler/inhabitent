@@ -5,6 +5,11 @@
 html {
 	box-sizing: border-box;
 	@include font-size(1);
+	font-family: $font__pre;
+}
+
+h2{
+	text-transform: uppercase;
 }
 
 *,
@@ -15,6 +20,7 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	margin-top: 50px;
 }
 
 blockquote, q {
@@ -34,7 +40,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+	// margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }
 
 ul {
@@ -67,4 +73,12 @@ img {
 table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
+}
+
+.heavy{
+	font-weight: bold;
+}
+
+.fa{
+	min-width: 25px;
 }
