@@ -606,7 +606,7 @@ a {
     .latest-adventures .adventure-container h2 {
       display: block;
       padding-top: 10%; }
-    .latest-adventures .adventure-container .read-more {
+    .latest-adventures .adventure-container .inhab-button {
       margin-top: 20px; }
     .latest-adventures .adventure-container .adventure-left {
       width: 50%;
@@ -628,13 +628,13 @@ a {
         width: 50%; }
 
 /* Posts and pages */
-.read-more {
+.inhab-button {
   text-transform: uppercase;
   border: 1px solid black;
   color: black;
   text-decoration: none;
   padding: 12px 18px; }
-  .read-more:hover {
+  .inhab-button:hover {
     background-color: #248A83;
     color: #fefefe;
     border: 1px solid #248A83; }
