@@ -106,33 +106,6 @@ function red_starter_scripts() {
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
 
-/**
-* Swaps out wordpress logo for inhabitent logo on login page
-*/
-function my_login_logo() { ?>
-    <style type="text/css">
-        body.login div#login h1 a{
-					background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-text-dark.svg);
-				 background-position: center center;
-				 background-repeat: no-repeat;
-				 background-size: 250px 250px;
-				 width:250px;
-        }
-
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
-function my_login_logo_url() {
-    return home_url();
-}
-add_filter( 'login_headerurl', 'my_login_logo_url' );
-
-function my_login_logo_url_title() {
-    return 'Inhabitent Online Hipster Camping Store';
-}
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
-
 
 /**
  * Custom template tags for this theme.
