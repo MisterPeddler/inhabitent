@@ -586,6 +586,47 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*Latest Adventures*/
+.latest-adventures {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 820px;
+  width: 1120px;
+  margin: 0 auto; }
+  .latest-adventures h1 {
+    font-family: "merriweather";
+    display: inline;
+    margin: 0 auto; }
+  .latest-adventures .adventure-container {
+    display: -ms-flexbox;
+    display: flex;
+    height: 540px; }
+    .latest-adventures .adventure-container h2 {
+      display: block;
+      padding-top: 10%; }
+    .latest-adventures .adventure-container .read-more {
+      margin-top: 20px; }
+    .latest-adventures .adventure-container .adventure-left {
+      width: 50%;
+      background-color: darkgrey; }
+    .latest-adventures .adventure-container .adventure-right-container {
+      width: 50%;
+      background-color: grey;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap; }
+      .latest-adventures .adventure-container .adventure-right-container .adventure-top-right {
+        width: 100%; }
+      .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-left {
+        width: 50%; }
+      .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-right {
+        width: 50%; }
+
 /* Posts and pages */
 .read-more {
   text-transform: uppercase;

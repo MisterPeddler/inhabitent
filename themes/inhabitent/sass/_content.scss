@@ -2,6 +2,65 @@
 # Content
 --------------------------------------------------------------*/
 
+/*Latest Adventures*/
+
+.latest-adventures{
+    //  color:white;
+		 display:flex;
+		 flex-direction: column;
+		 height: 820px;
+		 @include container;
+
+
+	h1{
+		font-family: $font__adventure;
+		 display: inline;
+		 margin: 0 auto;
+	}
+
+		.adventure-container{
+			display: flex;
+			height:540px;
+
+			h2{
+				display:block;
+				padding-top: 10%;
+			}
+
+			.read-more{
+				margin-top: 20px;
+			}
+
+				.adventure-left{
+					width:50%;
+					background-color: darkgrey;
+				}
+
+				.adventure-right-container{
+					width:50%;
+					background-color: grey;
+					display:flex;
+					flex-direction: row;
+					flex-flow: wrap;
+
+					.adventure-top-right{
+						width:100%;
+					}
+
+					.adventure-bottom-left{
+						width:50%;
+					}
+
+					.adventure-bottom-right{
+						width:50%;
+					}
+
+				}
+
+		}
+
+}
+
 /* Posts and pages */
 
 .read-more{
