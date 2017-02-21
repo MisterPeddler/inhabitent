@@ -8,7 +8,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
-		<script src="https://use.fontawesome.com/a64733d244.js"></script>
+		<!-- <script src="https://use.fontawesome.com/a64733d244.js"></script> -->
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">

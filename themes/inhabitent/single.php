@@ -8,7 +8,7 @@
  get_header(); ?>
 
 <!-- this is a single post page -->
-
+<div>thi is single php</div>
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

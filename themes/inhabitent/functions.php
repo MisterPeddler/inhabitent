@@ -95,6 +95,8 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/a64733d244.js', array(), '4.4.0', false );
+
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -102,6 +104,35 @@ function red_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+
+
+/**
+* Swaps out wordpress logo for inhabitent logo on login page
+*/
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a{
+					background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/inhabitent-logo-text-dark.svg);
+				 background-position: center center;
+				 background-repeat: no-repeat;
+				 background-size: 250px 250px;
+				 width:250px;
+        }
+
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Inhabitent Online Hipster Camping Store';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
 
 /**
  * Custom template tags for this theme.
@@ -112,3 +143,5 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+?>
