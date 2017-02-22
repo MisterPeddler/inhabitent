@@ -765,6 +765,32 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* About Container */
+.site-main.about {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .site-main.about .about.container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .site-main.about .about.container h1 {
+      text-align: center; }
+  .site-main.about .about-hero {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .site-main.about .about-hero h1 {
+      color: white; }
+
 /* Front page */
 .front-page .hero {
   background-image: url("../../images/home-hero.jpg");
@@ -776,6 +802,16 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
+
+.inhab-newsfeed-section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .inhab-newsfeed-section .inhab-newsfeed-item {
+    width: 30%; }
+    .inhab-newsfeed-section .inhab-newsfeed-item img {
+      width: 100%; }
 
 /* Home page*/
 .site-main:first-child {

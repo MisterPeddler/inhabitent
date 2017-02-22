@@ -2,6 +2,41 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+
+/* About Container */
+.site-main.about{
+display:flex;
+flex-direction: column;
+
+  .about.container{
+    display:flex;
+    flex-direction: column;
+
+    h1{
+      text-align: center;
+    }
+
+  }
+
+  .about-hero{
+    height:100vh;
+    width:100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+      color:white;
+    }
+
+  }
+
+
+}
+
+
+
 /* Front page */
 
 .front-page{
@@ -23,7 +58,18 @@
 
 }
 
+.inhab-newsfeed-section{
+  display:flex;
+  justify-content: space-around;
 
+  .inhab-newsfeed-item{
+    width:30%;
+
+    img{
+      width:100%;
+    }
+  }
+}
 
 /* Home page*/
 
@@ -54,7 +100,7 @@
     color:white;
   }
 
-  
+
 
   a{
     color: $color__brand-white;

@@ -59,5 +59,23 @@ function my_login_logo_url_title() {
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 
+/**
+* Update About Hero Image
+*/
+
+function update_hero_image() {
+
+				wp_enqueue_style (
+					'custom-style',
+					get_template_directory_uri() . '/build/css/style.min.css'
+				);
+				$url = CFS()->get( 'about_header_image' );
+        $custom_styles = ".about-hero {background-image: url({$url});}";
+        wp_add_inline_style( 'custom-style', $custom_styles );
+}
+add_action( 'wp_enqueue_scripts', 'update_hero_image' );
+
+
+
 
 ?>

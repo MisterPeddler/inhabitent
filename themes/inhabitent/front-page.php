@@ -21,7 +21,7 @@ get_header(); ?>
 <!-- more stuff goes here -> static content-->
 <!-- <div class="container"> -->
 
-<section class="inhab-newsfeed-section">
+<section class="inhab-newsfeed-section container">
   <?php
   global $post;
   $args = array(
