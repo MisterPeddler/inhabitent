@@ -60,22 +60,19 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 
 /**
-* Update About Hero Image
+* Update About Hero Imagetgk
 */
 
 function update_hero_image() {
 
-				wp_enqueue_style (
-					'custom-style',
-					get_template_directory_uri() . '/build/css/style.min.css'
-				);
+				if(!is_page_template('page-templates/about.php')){return;}
+
 				$url = CFS()->get( 'about_header_image' );
+				echo CFS()->get( 'about_header_image' );
+				if(!$url){return;}
+
         $custom_styles = ".about-hero {background-image: url({$url});}";
-        wp_add_inline_style( 'custom-style', $custom_styles );
+
+        wp_add_inline_style( 'red-starter-style', $custom_styles );
 }
 add_action( 'wp_enqueue_scripts', 'update_hero_image' );
-
-
-
-
-?>

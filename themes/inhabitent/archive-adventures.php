@@ -7,6 +7,8 @@
 
 get_header(); ?>
 
+this is archive Adventures
+
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -23,8 +25,6 @@ this is the atchive-products
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				/*how to get the price*/
-				<?php echo CFS()->get( 'price' ); ?>
 				<?php
 					get_template_part( 'template-parts/content' );
 				?>

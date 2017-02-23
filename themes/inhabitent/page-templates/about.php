@@ -5,7 +5,7 @@
  * @package Inhabitent Theme
  */
 
- update_hero_image();
+
  get_header(); ?>
 
  	<div id="primary" class="content-area">
@@ -19,7 +19,7 @@
             <?php echo CFS()->get( 'our_story' ); ?>
             <?php echo CFS()->get( 'our_team' ); ?>
           </div>
-          
+
  		</main><!-- #main -->
  	</div><!-- #primary -->
 

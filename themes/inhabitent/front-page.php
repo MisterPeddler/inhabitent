@@ -19,11 +19,49 @@ get_header(); ?>
   </section>
 
 <!-- more stuff goes here -> static content-->
-<!-- <div class="container"> -->
+
+<section class="shop-stuff-section">
+
+  <?php
+  $terms = get_terms( array(
+      'taxonomy' => 'product_type',
+      'hide_empty' => false,
+  ) );
+
+  // echo json_encode($terms);
+  //
+  // foreach($terms as $item){
+  //   echo $item->name;
+  //   echo "<br />";
+  //   echo $item->description;
+  //   echo "<br />";
+  // }
+  ?>
+
+<h1>SHOP STUFF</h1>
+
+<?php foreach($terms as $item) :?>
+
+  <div class="shop-cat-container">
+
+    <?php
+    $imgUrl = get_template_directory_uri() . "/images/" . $item->slug . ".svg";
+    $linkUrl = get_home_url() . "/product_type/" . $name;
+    ?>
+    
+    <img src=" <?php echo $imgUrl ?> "/>
+    <p class="shop-cat-description"><?php echo $item->description ?></p>
+    <a href="<?php echo $linkUrl ?>"> <?php echo $item->name ?> Stuff</a>
+  </div>
+<?php endforeach ?>
+
+</section>
+
+
 
 <section class="inhab-newsfeed-section container">
   <?php
-  global $post;
+  //$post;
   $args = array(
 	'posts_per_page'   => 3,
 	'orderby'          => 'date',
