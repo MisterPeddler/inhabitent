@@ -21,6 +21,55 @@ function red_starter_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
 
+/**
+ * Customize excerpt length and style.
+ *
+ * @param  string The raw post content.
+ * @return string
+ */
+function red_wp_trim_excerpt( $text ) {
+	$raw_excerpt = $text;
+
+	if ( '' == $text ) {
+		// retrieve the post content
+		$text = get_the_content('');
+
+		// delete all shortcode tags from the content
+		$text = strip_shortcodes( $text );
+
+		$text = apply_filters( 'the_content', $text );
+		$text = str_replace( ']]>', ']]&gt;', $text );
+
+		// indicate allowable tags
+		$allowed_tags = '<p>,<a>,<em>,<strong>,<blockquote>,<cite>';
+		$text = strip_tags( $text, $allowed_tags );
+
+		// change to desired word count
+		$excerpt_word_count = 50;
+		$excerpt_length = apply_filters( 'excerpt_length', $excerpt_word_count );
+
+		// // create a custom "more" link
+		 $excerpt_end = '<span>[...]</span><p><a href="' . get_permalink() . '" class="inhab-button">Read more &rarr;</a></p>'; // modify excerpt ending
+		 $excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
+
+		// add the elipsis and link to the end if the word count is longer than the excerpt
+		$words = preg_split( "/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY );
+
+		if ( count( $words ) > $excerpt_length ) {
+			array_pop( $words );
+			$text = implode( ' ', $words );
+		  $text = $text . $excerpt_more;
+		} else {
+			$text = implode( ' ', $words );
+		}
+	}
+
+	return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
+}
+
+remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+add_filter( 'get_the_excerpt', 'red_wp_trim_excerpt' );
+
 
 
 /**
@@ -76,3 +125,32 @@ function update_hero_image() {
         wp_add_inline_style( 'red-starter-style', $custom_styles );
 }
 add_action( 'wp_enqueue_scripts', 'update_hero_image' );
+
+
+function hwl_home_pagesize( $query ) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+
+
+
+    if ( is_post_type_archive( 'products' ) ) {
+        // Display 50 posts for a custom post type called 'movie'
+        $query->set( 'posts_per_page', 16 );
+				$query->set('orderby', 'title');
+				$query->set( 'order', 'ASC');
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
+
+
+function my_theme_archive_title( $title ) {
+
+	if(is_post_type_archive('products')){
+		$title = 'Shop Stuff';
+	}
+
+    return $title;
+}
+
+add_filter( 'get_the_archive_title', 'my_theme_archive_title' );

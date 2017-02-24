@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-
+this is home
 <div class="container">
 	<div id="primary" class="content-area">
 

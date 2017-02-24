@@ -266,7 +266,9 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  text-transform: uppercase;
+  font-family: "novecento"; }
 
 /* Copy */
 p {
@@ -293,7 +295,7 @@ pre {
   padding: 1.6rem; }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "merriweather";
+  font-family: "merriweather";
   font-size: 15px;
   font-size: 0.9375rem; }
 
@@ -316,6 +318,9 @@ html {
   font-size: 16px;
   font-size: 1rem;
   font-family: "merriweather"; }
+
+a {
+  text-decoration: none; }
 
 h2 {
   text-transform: uppercase; }
@@ -586,46 +591,15 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/*Latest Adventures*/
-.latest-adventures {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  height: 820px;
-  width: 1120px;
-  margin: 0 auto; }
-  .latest-adventures h1 {
-    font-family: "merriweather";
-    display: inline;
-    margin: 0 auto; }
-  .latest-adventures .adventure-container {
-    display: -ms-flexbox;
-    display: flex;
-    height: 540px; }
-    .latest-adventures .adventure-container h2 {
-      display: block;
-      padding-top: 10%; }
-    .latest-adventures .adventure-container .inhab-button {
-      margin-top: 20px; }
-    .latest-adventures .adventure-container .adventure-left {
-      width: 50%;
-      background-color: darkgrey; }
-    .latest-adventures .adventure-container .adventure-right-container {
-      width: 50%;
-      background-color: grey;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-flow: wrap;
-          flex-flow: wrap; }
-      .latest-adventures .adventure-container .adventure-right-container .adventure-top-right {
-        width: 100%; }
-      .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-left {
-        width: 50%; }
-      .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-right {
-        width: 50%; }
+/*Button styles*/
+.green-button-style {
+  background-color: #248A83;
+  color: #fefefe;
+  text-transform: uppercase;
+  padding: 10px 20px; }
+  .green-button-style:hover {
+    background-color: #19625d;
+    color: #fefefe; }
 
 /* Posts and pages */
 .inhab-button {
@@ -803,15 +777,100 @@ object {
   -ms-flex-align: center;
       align-items: center; }
 
+.latest-adventures {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 820px;
+  width: 1120px;
+  margin: 0 auto; }
+  .latest-adventures h1 {
+    display: inline;
+    margin: 0 auto;
+    font-weight: lighter; }
+  .latest-adventures .adventure-container {
+    display: -ms-flexbox;
+    display: flex;
+    height: 540px; }
+    .latest-adventures .adventure-container h2 {
+      display: block;
+      padding-top: 10%; }
+    .latest-adventures .adventure-container .inhab-button {
+      margin-top: 20px; }
+    .latest-adventures .adventure-container .adventure-left {
+      width: 50%;
+      background-color: darkgrey; }
+    .latest-adventures .adventure-container .adventure-right-container {
+      width: 50%;
+      background-color: grey;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap; }
+      .latest-adventures .adventure-container .adventure-right-container .adventure-top-right {
+        width: 100%; }
+      .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-left {
+        width: 50%; }
+      .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-right {
+        width: 50%; }
+
+.shop-stuff-section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .shop-stuff-section h1 {
+    font-weight: lighter;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2.5rem; }
+  .shop-stuff-section .shop-stuff-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .shop-stuff-section .shop-stuff-container .shop-cat-item {
+      width: 25%;
+      text-align: center;
+      width: 260px;
+      height: 270px;
+      border: 1px solid #e1e1e1;
+      border-top: 5px solid #e1e1e1;
+      padding: 10px 10px 0 10px; }
+      .shop-stuff-section .shop-stuff-container .shop-cat-item p {
+        font-family: "merriweather";
+        height: 75px;
+        margin-bottom: 30px; }
+      .shop-stuff-section .shop-stuff-container .shop-cat-item:hover {
+        border: 1px solid #d99054;
+        border-top: 5px solid #d99054; }
+      .shop-stuff-section .shop-stuff-container .shop-cat-item img {
+        width: 70px; }
+
 .inhab-newsfeed-section {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  .inhab-newsfeed-section .inhab-newsfeed-item {
-    width: 30%; }
-    .inhab-newsfeed-section .inhab-newsfeed-item img {
-      width: 100%; }
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .inhab-newsfeed-section h1 {
+    text-align: center;
+    font-weight: lighter; }
+  .inhab-newsfeed-section .inhab-newsfeed-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item {
+      width: 30%; }
+      .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item img {
+        width: 100%; }
 
 /* Home page*/
 .site-main:first-child {

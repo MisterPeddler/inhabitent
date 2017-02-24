@@ -6,7 +6,7 @@
  */
 
 ?>
-
+this is content
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">
@@ -27,6 +27,6 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<a class="inhab-button" href="<?php echo esc_url( get_permalink() ) ?>">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+	<!-- <a class="inhab-button" href="<?php echo esc_url( get_permalink() ) ?>">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> -->
 
 </article><!-- #post-## -->

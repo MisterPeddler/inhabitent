@@ -9,7 +9,7 @@
 get_header(); ?>
 
 
-
+this is front page
 <section class="front-page">
 
   <section class="hero">
@@ -21,47 +21,45 @@ get_header(); ?>
 <!-- more stuff goes here -> static content-->
 
 <section class="shop-stuff-section">
-
   <?php
   $terms = get_terms( array(
       'taxonomy' => 'product_type',
       'hide_empty' => false,
   ) );
 
-  // echo json_encode($terms);
-  //
-  // foreach($terms as $item){
-  //   echo $item->name;
-  //   echo "<br />";
-  //   echo $item->description;
-  //   echo "<br />";
-  // }
   ?>
 
 <h1>SHOP STUFF</h1>
+<div class="shop-stuff-container container">
 
 <?php foreach($terms as $item) :?>
 
-  <div class="shop-cat-container">
+  <div class="shop-cat-item">
 
     <?php
     $imgUrl = get_template_directory_uri() . "/images/" . $item->slug . ".svg";
-    $linkUrl = get_home_url() . "/product_type/" . $name;
+    $linkUrl = get_home_url() . "/product_type/" . $item->slug;
+    //echo $linkUrl;
     ?>
-    
+
     <img src=" <?php echo $imgUrl ?> "/>
     <p class="shop-cat-description"><?php echo $item->description ?></p>
-    <a href="<?php echo $linkUrl ?>"> <?php echo $item->name ?> Stuff</a>
+    <a class="green-button-style" href="<?php echo $linkUrl ?>"> <?php echo $item->name ?> Stuff</a>
   </div>
 <?php endforeach ?>
 
+</div>
 </section>
 
 
 
-<section class="inhab-newsfeed-section container">
+<section class="inhab-newsfeed-section">
+
+<h1>Inhabitent Journal</h1>
+
+<div class="inhab-newsfeed-container container">
+
   <?php
-  //$post;
   $args = array(
 	'posts_per_page'   => 3,
 	'orderby'          => 'date',
@@ -80,12 +78,15 @@ get_header(); ?>
 
     <div class="entry-meta"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?></div>
     <h3><?php the_title() ?></h3>
-    <a class="inhab-button" href="<?php the_permalink() ?>">READ ENTRY</a>
+    <!-- <a class="inhab-button" href="<?php the_permalink() ?>">READ ENTRY</a> -->
 
   </div>
 
 <?php endforeach;
 wp_reset_postdata(); ?>
+
+</div>
+
 </section>
 
 <section class="latest-adventures">
