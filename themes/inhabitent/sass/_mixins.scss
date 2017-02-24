@@ -15,3 +15,8 @@
 	width: 1120px;
 	margin: 0 auto;
 }
+
+@mixin top-heavy-border-box{
+	border: 1px solid $color__box-border;
+	border-top: 5px solid $color__box-border;
+}

@@ -29,8 +29,8 @@ this is front page
 
   ?>
 
-<h1>SHOP STUFF</h1>
-<div class="shop-stuff-container container">
+<h1 class="front-page-heading">SHOP STUFF</h1>
+<div class="shop-stuff-container">
 
 <?php foreach($terms as $item) :?>
 
@@ -55,9 +55,9 @@ this is front page
 
 <section class="inhab-newsfeed-section">
 
-<h1>Inhabitent Journal</h1>
+<h1 >Inhabitent Journal</h1>
 
-<div class="inhab-newsfeed-container container">
+<div class="inhab-newsfeed-container">
 
   <?php
   $args = array(
@@ -76,9 +76,11 @@ this is front page
 			<?php the_post_thumbnail( 'medium' ); ?>
 		<?php endif; ?>
 
-    <div class="entry-meta"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?></div>
-    <h3><?php the_title() ?></h3>
-    <!-- <a class="inhab-button" href="<?php the_permalink() ?>">READ ENTRY</a> -->
+    <div class="content-box">
+      <div class="entry-meta"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></div>
+      <p><?php the_title() ?></p>
+      <a class="inhab-button" href="<?php the_permalink() ?>">READ ENTRY</a>
+    </div>
 
   </div>
 
