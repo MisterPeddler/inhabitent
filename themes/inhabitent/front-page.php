@@ -8,8 +8,6 @@
 
 get_header(); ?>
 
-
-this is front page
 <section class="front-page">
 
   <section class="hero">

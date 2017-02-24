@@ -18,6 +18,8 @@
 					</div>
 					<a href="#" ><img src="<?php echo get_bloginfo('template_url') ?>/images/inhabitent-logo-text.svg" /></a>
 				</div><!-- .site-info -->
+
+				<p class="copyr" >COPYRIGHT © 2016 INHABITENT</p>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
