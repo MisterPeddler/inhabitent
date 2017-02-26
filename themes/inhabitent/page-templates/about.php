@@ -13,7 +13,7 @@
  		<main id="main" class="site-main about" role="main">
 
           <div class="about-hero">
-            <h1>ABOUT</h1>
+            <h1 class="about-title">ABOUT</h1>
           </div>
 
           <div class="about container">

@@ -873,11 +873,17 @@ object {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
+  .site-main.about .p1 {
+    font-family: "merriweather";
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px; }
   .site-main.about .about.container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    margin-bottom: 40px; }
     .site-main.about .about.container h1 {
       text-align: center; }
   .site-main.about .about-hero {
@@ -890,8 +896,9 @@ object {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center; }
-    .site-main.about .about-hero h1 {
-      color: white; }
+    .site-main.about .about-hero .about-title {
+      color: white;
+      font-size: 3rem; }
 
 /* Front page */
 .home h1 {

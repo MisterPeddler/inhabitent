@@ -56,12 +56,22 @@
     display: flex;
     flex-direction: column;
 
+    .p1{
+      font-family: $font__pre;
+      width:800px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
     .about.container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 40px;
 
         h1 {
+
             text-align: center;
+
         }
     }
 
@@ -73,11 +83,14 @@
         justify-content: center;
         align-items: center;
 
-        h1 {
-            color: white;
+        .about-title {
+          color:white;
+              font-size: 3rem;
         }
     }
 }
+
+
 /* Front page */
 .home h1 {
     font-weight: lighter;
