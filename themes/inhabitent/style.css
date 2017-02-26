@@ -465,7 +465,35 @@ a {
   background: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #ccc;
   z-index: 1;
-  height: 50px; }
+  height: 50px;
+  /*search form*/
+  /*end of search form*/ }
+  .main-navigation .nav-menu-holder {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+  .main-navigation fieldset, .main-navigation input, .main-navigation button {
+    border: none;
+    padding-right: 0;
+    padding-top: 8px;
+    outline: none; }
+  .main-navigation button {
+    box-shadow: none;
+    background: none;
+    font-size: 1rem;
+    color: #248A83; }
+  .main-navigation .search-field {
+    width: 0;
+    transition: width 0.5s;
+    font-size: 1rem;
+    color: #404040;
+    text-transform: uppercase;
+    outline: none; }
+  .main-navigation .search-field-show {
+    width: 200px; }
   .main-navigation .logo {
     padding-top: 8px;
     width: 50px; }
@@ -486,10 +514,16 @@ a {
     -ms-flex-align: center;
         align-items: center; }
   .main-navigation li {
-    padding-right: 40px; }
+    padding-right: 20px; }
+    .main-navigation li:last-child {
+      padding-right: 0; }
+    .main-navigation li:hover > a,
+    .main-navigation li.focus > a {
+      color: black; }
   .main-navigation a {
     text-decoration: none; }
 
+/* nav bar search form */
 /* Small menu. */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -589,7 +623,6 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/*Button styles*/
 .green-button-style {
   background-color: #248A83;
   color: #fefefe;

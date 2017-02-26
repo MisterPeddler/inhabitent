@@ -32,9 +32,10 @@
 					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button> -->
 						<div class="container">
 				  <a class="logo" href="<?php echo get_bloginfo('url') ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/inhabitent-logo-tent.svg"/></a>
-
+					<div class="nav-menu-holder">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					<?php get_search_form(); ?>
+					</div>
            </div>
 				</nav><!-- #site-navigation -->
 
