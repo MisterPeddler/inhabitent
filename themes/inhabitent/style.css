@@ -332,7 +332,7 @@ h1, h2, h3 {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  margin-top: 50px; }
+  margin-top: -16px; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -447,7 +447,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #248A83; }
+  color: #fefefe; }
   a:hover, a:focus, a:active {
     color: #2f1339; }
   a:focus {
@@ -456,18 +456,22 @@ a {
     outline: 0; }
 
 /* Menus */
+.home {
+  position: relative; }
+
 .main-navigation {
-  position: fixed;
   width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  position: absolute;
   top: 0;
   left: 0;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid #ccc;
-  z-index: 1;
-  height: 50px;
   /*search form*/
   /*end of search form*/ }
+  .main-navigation .logo {
+    width: 50px;
+    content: url("../../images/inhabitent-logo-tent-white.svg");
+    height: 50px; }
   .main-navigation .nav-menu-holder {
     display: -ms-flexbox;
     display: flex;
@@ -483,20 +487,32 @@ a {
   .main-navigation button {
     box-shadow: none;
     background: none;
+    text-shadow: none;
     font-size: 1rem;
-    color: #248A83; }
+    color: #fefefe; }
+    .main-navigation button:hover {
+      color: #f0e4d1; }
   .main-navigation .search-field {
     width: 0;
     transition: width 0.5s;
     font-size: 1rem;
-    color: #404040;
+    color: #fefefe;
+    background: none;
     text-transform: uppercase;
     outline: none; }
+    .main-navigation .search-field:focus {
+      color: #fefefe; }
+    .main-navigation .search-field::-webkit-input-placeholder {
+      color: #f0e4d1; }
+    .main-navigation .search-field::-moz-placeholder {
+      color: #f0e4d1; }
+    .main-navigation .search-field:-ms-input-placeholder {
+      color: #f0e4d1; }
+    .main-navigation .search-field::placeholder {
+      color: #f0e4d1; }
   .main-navigation .search-field-show {
+    color: #fefefe;
     width: 200px; }
-  .main-navigation .logo {
-    padding-top: 8px;
-    width: 50px; }
   .main-navigation .container {
     width: 1120px;
     margin: 0 auto;
@@ -519,7 +535,7 @@ a {
       padding-right: 0; }
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
-      color: black; }
+      color: #f0e4d1; }
   .main-navigation a {
     text-decoration: none; }
 
@@ -543,6 +559,39 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.fix-to-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #ccc;
+  z-index: 1; }
+  .fix-to-top .logo {
+    content: url("../../images/inhabitent-logo-tent.svg"); }
+  .fix-to-top a {
+    color: #248A83; }
+    .fix-to-top a:hover {
+      color: black; }
+  .fix-to-top button {
+    box-shadow: none;
+    background: none;
+    font-size: 1rem;
+    color: #248A83; }
+    .fix-to-top button:hover {
+      color: #248A83; }
+  .fix-to-top .search-field {
+    color: #666; }
+    .fix-to-top .search-field:focus {
+      color: black; }
+    .fix-to-top .search-field::-webkit-input-placeholder {
+      color: #808080; }
+    .fix-to-top .search-field::-moz-placeholder {
+      color: #808080; }
+    .fix-to-top .search-field:-ms-input-placeholder {
+      color: #808080; }
+    .fix-to-top .search-field::placeholder {
+      color: #808080; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -787,6 +836,10 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* About Page */
+.page-template-about {
+  position: relative;
+  margin-top: -100px; }
+
 .site-main.about {
   display: -ms-flexbox;
   display: flex;
@@ -825,6 +878,7 @@ object {
   background-image: url("../../images/home-hero.jpg");
   height: 100vh;
   background-size: cover;
+  top: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -853,7 +907,7 @@ object {
       height: 270px;
       border: 1px solid #e1e1e1;
       border-top: 5px solid #e1e1e1;
-      padding: 10px 10px 0 10px; }
+      padding: 10px 10px 0; }
       .shop-stuff-section .shop-stuff-container .shop-cat-item p {
         font-family: "merriweather";
         height: 75px;
@@ -889,14 +943,14 @@ object {
         border-top: 5px solid #e1e1e1;
         margin-top: -7px;
         height: 170px;
-        padding: 20px 10px 0px 10px;
+        padding: 20px 10px 0;
         position: relative; }
         .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .entry-meta {
           font-family: "merriweather";
           font-size: 0.8rem;
           color: #404040; }
         .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box p {
-          margin: 10px 0 0 0;
+          margin: 10px 0 0;
           text-transform: uppercase;
           font-weight: bold;
           font-size: 1.25rem;

@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Template Name: About Page Template
@@ -23,5 +24,5 @@
  		</main><!-- #main -->
  	</div><!-- #primary -->
 
- <?php
- get_footer(); ?>
+
+ <?php get_footer(); ?>

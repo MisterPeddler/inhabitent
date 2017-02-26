@@ -1,40 +1,45 @@
-(function($){
+(function($) {
 
 
-  var searchField = $('.search-field');
-  var searchForm = $('.search-form');
-  var searchSubmit = $('.search-submit');
-
-searchSubmit.on('click', function(e){
-  e.preventDefault();
-  searchField.toggleClass('search-field-show').focus();
-});
-
-searchField.focusout(function(){
-  console.log('i lost focus');
-  if( searchField.val().length === 0){
-      searchField.removeClass('search-field-show');
-  }
-
-});
+    var searchField = $('.search-field');
+    var searchForm = $('.search-form');
+    var searchSubmit = $('.search-submit');
+    var height = $(window).height();
 
 
-searchField.keypress(function(e) {
-  if(e.which == 13 ) {
-    e.preventDefault();
-        $('.search-form').trigger('submit');
- }
+    //show/hide the search form when the icon is clicked
+    searchSubmit.on('click', function(e) {
+        e.preventDefault();
+        searchField.toggleClass('search-field-show').focus();
+    });
 
-});
+    //hide the form when it loses focus if there's nothing in it
+    searchField.focusout(function() {
+        if (searchField.val().length === 0) {
+            searchField.removeClass('search-field-show');
+        }
 
+    });
 
+    //if the form has focus and 'enter' is pressed submit the form
+    searchField.keypress(function(e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            $('.search-form').trigger('submit');
+        }
 
+    });
 
-
-
-//hide form when focus is lost
-// $('.search-field')
-
-
+    $(window).scroll(function() {
+      console.log('in the scroll height -> ' +  height);
+        if ($(this).scrollTop() >= height) {
+            console.log('adding the class');
+            $('.main-navigation').addClass('fix-to-top');
+        }
+        else {
+            console.log('removing the class');
+            $('.main-navigation').removeClass('fix-to-top');
+        }
+    });
 
 })(jQuery);

@@ -5,7 +5,7 @@
 /* Links */
 
 a {
-	color: $color__brand-green;
+	color: $color__brand-white;
 
 	&:visited {
 		// color: $color__link-visited;
@@ -26,21 +26,27 @@ a {
 
 /* Menus */
 
+
+
+.home{
+	position:relative;
+}
+
 .main-navigation {
-
-	position: fixed;
 	width: 100%;
-	top: 0;
-	left: 0;
 	box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.8);
-	border-bottom: 1px solid $color__background-hr;
-	z-index: 1;
 	height: 50px;
-
-
+	position:absolute;
+	top:0;
+	left:0;
 /*search form*/
 
+.logo{
+	// padding-top: 8px;
+	width: 50px;
+	content:url('../../images/inhabitent-logo-tent-white.svg');
+	height:50px;
+}
 	.nav-menu-holder{
 		display:flex;
 		flex-direction: row;
@@ -57,40 +63,45 @@ a {
 	button{
 		box-shadow:none;
 		background:none;
+		text-shadow: none;
 		font-size: 1rem;
-		color:$color__brand-green;
-		// &:focus{
-		// 	outline:none;
-		// }
-
+		color:$color__brand-white;
+		 &:hover{
+		 	color:$color__brand-yellow;
+		 }
 
 }
+
 
 .search-field{
 	width:0;
 	transition: width 0.5s;
 	font-size: 1rem;
-	color:$color__text-main;
+	color:$color__brand-white;
+	background:none;
 	text-transform: uppercase;
 	outline:none;
+
+	&:focus{
+		color:$color__brand-white;
+	}
+
+	&::placeholder{
+		color:$color__brand-yellow;
+	}
 }
 
 .search-field-show{
-
+color:$color__brand-white;
 	width:200px;
 
 }
 
 
 
-
-
 /*end of search form*/
 
-	.logo{
-		padding-top: 8px;
-		width: 50px;
-	}
+
 
 	.container{
 		@include container;
@@ -164,7 +175,7 @@ a {
 		&:hover > a,
 		&.focus > a {
 
-			color:black;
+			color:$color__brand-yellow;
 		}
 	}
 	a {
@@ -222,4 +233,48 @@ a {
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.fix-to-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.8);
+	border-bottom: 1px solid $color__background-hr;
+	z-index: 1;
+
+	.logo{
+		content:url('../../images/inhabitent-logo-tent.svg');
+	}
+
+	a{
+		color: $color__brand-green;
+
+		&:hover{
+			color: black;
+		}
+	}
+
+	button{
+		box-shadow:none;
+		background:none;
+		font-size: 1rem;
+		color:$color__brand-green;
+
+		&:hover{
+			color:$color__brand-green;
+		}
+
+		}
+
+		.search-field{
+			color:$color__border-abbr;
+			&:focus{
+				color:black;
+			}
+
+			&::placeholder{
+				color:$color__brand-medium-grey;
+			}
+		}
 }

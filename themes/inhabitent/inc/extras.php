@@ -117,7 +117,7 @@ function update_hero_image() {
 				if(!is_page_template('page-templates/about.php')){return;}
 
 				$url = CFS()->get( 'about_header_image' );
-				echo CFS()->get( 'about_header_image' );
+				//echo CFS()->get( 'about_header_image' );
 				if(!$url){return;}
 
         $custom_styles = ".about-hero {background-image: url({$url});}";
@@ -125,6 +125,14 @@ function update_hero_image() {
         wp_add_inline_style( 'red-starter-style', $custom_styles );
 }
 add_action( 'wp_enqueue_scripts', 'update_hero_image' );
+
+function set_nav_bar_type(){
+
+	if(is_page_template('page-templates/about.php') || is_page_template('front-page.php')){
+
+	}
+
+}
 
 
 function hwl_home_pagesize( $query ) {
@@ -154,3 +162,15 @@ function my_theme_archive_title( $title ) {
 }
 
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+
+// function fix_nav_bar_to_top($classes){
+//
+// if (is_page_template('page-templates/about.php') || is_page_template('front-page.php')){
+// 			    global $post;
+// 					$classes[] = '.fix-to-top'; // Add your class however its generated here
+// 					return $classes;
+// 		}
+// }
+//
+// add_filter('post_class', 'fix_nav_bar_to_top');

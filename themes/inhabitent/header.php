@@ -8,7 +8,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
-		<!-- <script src="https://use.fontawesome.com/a64733d244.js"></script> -->
+
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -28,7 +28,7 @@
 				</div><!-- .site-branding -->
 
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+				<nav id="site-navigation" class="main-navigation<?php echo is_page_template('page-templates/about.php') || is_front_page() ? ' ' : ' fix-to-top'?>" role="navigation">
 					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button> -->
 						<div class="container">
 				  <a class="logo" href="<?php echo get_bloginfo('url') ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/inhabitent-logo-tent.svg"/></a>
