@@ -1,30 +1,39 @@
 <?php
 /**
- * The main template file.
+ * The template for displaying archive pages.
  *
  * @package RED_Starter_Theme
  */
 
 get_header(); ?>
 
-<div>this is the taxonomy product thing</div>
+<div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+
+
+
+			<header class="page-header product-page-header">
+
+
+				<h1 class="page-title"><?php single_term_title();?></h1>
+				<p><?php echo term_description();?></p>
+
+				<div class="dashed-line"></div>
+			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<div class="product-container">
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content' ); ?>
+				<?php
+					get_template_part( 'template-parts/content-product' );
+				?>
 
 			<?php endwhile; ?>
+				</div>
 
 			<?php the_posts_navigation(); ?>
 
@@ -37,5 +46,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
+</div>
 <?php get_footer(); ?>

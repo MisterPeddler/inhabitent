@@ -156,21 +156,17 @@ function my_theme_archive_title( $title ) {
 
 	if(is_post_type_archive('products')){
 		$title = 'Shop Stuff';
+	}else if(is_post_type_archive('do')){
+		$title = 'Do';
+	}else if(is_post_type_archive('wear')){
+		$title = 'Do';
+	}else if(is_post_type_archive('eat')){
+		$title = 'Do';
+	}else if(is_post_type_archive('sleep')){
+		$title = 'Do';
 	}
 
     return $title;
 }
 
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
-
-
-// function fix_nav_bar_to_top($classes){
-//
-// if (is_page_template('page-templates/about.php') || is_page_template('front-page.php')){
-// 			    global $post;
-// 					$classes[] = '.fix-to-top'; // Add your class however its generated here
-// 					return $classes;
-// 		}
-// }
-//
-// add_filter('post_class', 'fix_nav_bar_to_top');

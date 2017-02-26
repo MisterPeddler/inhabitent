@@ -317,7 +317,8 @@ html {
   font-family: "merriweather"; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 h1, h2, h3 {
   text-transform: uppercase;
@@ -838,6 +839,11 @@ object {
   font-size: 2.5rem;
   text-align: center; }
 
+.product-page-header p {
+  text-align: center;
+  font-family: "merriweather";
+  margin-bottom: 40px; }
+
 .product-page-header .product-types {
   display: -ms-flexbox;
   display: flex;
@@ -1064,7 +1070,7 @@ object {
   width: 760px; }
 
 .product-container {
-  width: 100%;
+  width: 1120px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
