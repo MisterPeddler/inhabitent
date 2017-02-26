@@ -289,3 +289,46 @@
         width: 760px;
     }
 }
+
+
+/*single product pages*/
+
+.single-product-article{
+
+display:flex;
+flex-direction: row;
+flex-wrap: nowrap;
+padding-bottom: 80px;
+
+img{
+  width: 540px;
+  object-fit: cover;
+}
+
+.product-info-container{
+  width:50%;
+  padding-left: 40px;
+
+  .price{
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h1{
+    margin-top: 0;
+    font-size: 2.2rem;
+    color:$color__brand-orange;
+  }
+
+  p{
+    width:auto;
+  }
+
+
+  .entry-footer{
+    margin-top: 30px;
+  }
+}
+
+}
