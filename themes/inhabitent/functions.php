@@ -111,8 +111,12 @@ function red_starter_scripts() {
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	// 	wp_enqueue_script( 'comment-reply' );
 	// }
+
+	wp_enqueue_script( 'nav-bar', get_template_directory_uri() . '/js/navbar.js', array('jquery'), '1', true);
+
+
 		if(is_page_template('page-templates/about.php') || is_front_page()){
-			wp_enqueue_script( 'nav-bar', get_template_directory_uri() . '/js/navbar.js', array('jquery'), '1', true);
+			wp_enqueue_script( 'sticky-nav', get_template_directory_uri() . '/js/sticky-nav.js', array('jquery'), '1', true);
 		}
 
 }

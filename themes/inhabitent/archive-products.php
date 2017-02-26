@@ -10,26 +10,51 @@ get_header(); ?>
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-this is the atchive-products
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+
+
+
+			<header class="page-header product-page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+
+				<?php
+				$terms = get_terms( array(
+						'taxonomy' => 'product_type',
+						'hide_empty' => false,
+				) );
+				?>
+
+				<div class="product-types">
+					<?php foreach($terms as $item) :?>
+
+					    <?php
+					    $linkUrl = get_home_url() . "/product_type/" . $item->slug;
+					    ?>
+					    <a class="product-type-link" href="<?php echo $linkUrl ?>"> <?php echo $item->name ?></a>
+
+					<?php endforeach ?>
+
+				</div>
+
+				<div class="dashed-line"></div>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<div class="product-container">
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				/*how to get the price*/
-				<?php echo CFS()->get( 'price' ); ?>
+
+
 				<?php
-					get_template_part( 'template-parts/content' );
+					get_template_part( 'template-parts/content-product' );
 				?>
 
+
 			<?php endwhile; ?>
+				</div>
 
 			<?php the_posts_navigation(); ?>
 
@@ -42,6 +67,6 @@ this is the atchive-products
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 </div>
 <?php get_footer(); ?>

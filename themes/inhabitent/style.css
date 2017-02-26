@@ -448,8 +448,6 @@ textarea {
 /* Links */
 a {
   color: #fefefe; }
-  a:hover, a:focus, a:active {
-    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -835,6 +833,30 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/*product pages*/
+.product-page-header h1 {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.product-page-header .product-types {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 340px;
+  margin: 0 auto;
+  padding-bottom: 40px; }
+  .product-page-header .product-types a {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #248A83; }
+    .product-page-header .product-types a:hover {
+      color: #2f1339; }
+
+.product-page-header .dashed-line {
+  border-top: 1px dashed #ccc;
+  margin-bottom: 50px; }
+
 /* About Page */
 .page-template-about {
   position: relative;
@@ -1040,3 +1062,46 @@ object {
   font-family: "merriweather";
   line-height: 200%;
   width: 760px; }
+
+.product-container {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-bottom: 70px; }
+  .product-container .type-products {
+    display: -ms-flexbox;
+    display: flex; }
+    .product-container .type-products img {
+      object-fit: cover;
+      width: 260px;
+      height: 250px; }
+    .product-container .type-products .product-info-container {
+      border: 1px solid #e1e1e1;
+      border-top: 5px solid #e1e1e1;
+      margin-top: -7px; }
+      .product-container .type-products .product-info-container .product-info {
+        width: 260px;
+        height: 50px;
+        margin: 0 auto;
+        position: relative; }
+        .product-container .type-products .product-info-container .product-info p {
+          font-family: "merriweather";
+          display: inline;
+          position: absolute;
+          background-color: white;
+          overflow: hidden;
+          white-space: nowrap; }
+          .product-container .type-products .product-info-container .product-info p:first-child {
+            left: 0;
+            padding-left: 15px; }
+            .product-container .type-products .product-info-container .product-info p:first-child:after {
+              content: " ........................"; }
+          .product-container .type-products .product-info-container .product-info p:last-child {
+            padding-right: 15px;
+            right: 0; }
