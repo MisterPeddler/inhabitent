@@ -21,7 +21,6 @@
     <div class="product-info">
         <p><?php the_title(); ?></p>
         <p><?php echo CFS()->get( 'price' ); ?></p>
-        <!-- <?php the_title( sprintf( '<p class="entry-title">', '</p>' )); ?> -->
 
     </div>
     </div>

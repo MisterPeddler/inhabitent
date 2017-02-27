@@ -1,227 +1,149 @@
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-
 /* Links */
-
-.single-social-icons{
+.single-social-icons {
 	margin-top: 40px;
 }
 
 a {
 	color: $color__brand-white;
 
-	&:visited {
-		// color: $color__link-visited;
-	}
-	&:hover,
 	&:focus,
-	&:active {
-		// color: $color__brand-purple;
-	}
-	&:focus {
+	&:focus,
+	&:hover {
 		outline: thin dotted;
 	}
-	&:hover,
-	&:active {
+
+	&:active,
+	&:hover {
 		outline: 0;
 	}
 }
-
 /* Menus */
-
-
-
-.home{
-	position:relative;
+.home {
+	position: relative;
 }
 
 .main-navigation {
 	width: 100%;
 	box-sizing: border-box;
 	height: 50px;
-	position:absolute;
-	top:0;
-	left:0;
-/*search form*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*search form*/
+	.logo {
+		width: 50px;
+		content: url('../../images/inhabitent-logo-tent-white.svg');
+		height: 50px;
+	}
 
-.logo{
-	// padding-top: 8px;
-	width: 50px;
-	content:url('../../images/inhabitent-logo-tent-white.svg');
-	height:50px;
-}
-	.nav-menu-holder{
-		display:flex;
+	.nav-menu-holder {
+		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 	}
 
-	fieldset, input, button{
-		border:none;
-		padding-right:0;
-		padding-top:8px;
-		outline:none;
+	button,
+	fieldset,
+	input {
+		border: none;
+		padding-right: 0;
+		padding-top: 8px;
+		outline: none;
 	}
 
-	button{
-		box-shadow:none;
-		background:none;
+	button {
+		box-shadow: none;
+		background: none;
 		text-shadow: none;
 		font-size: 1rem;
-		color:$color__brand-white;
-		 &:hover{
-		 	color:$color__brand-yellow;
-		 }
+		color: $color__brand-white;
 
-}
-
-
-.search-field{
-	width:0;
-	transition: width 0.5s;
-	font-size: 1rem;
-	color:$color__brand-white;
-	background:none;
-	text-transform: uppercase;
-	outline:none;
-
-	&:focus{
-		color:$color__brand-white;
+		&:hover {
+			color: $color__brand-yellow;
+		}
 	}
 
-	&::placeholder{
-		color:$color__brand-yellow;
+	.search-field {
+		width: 0;
+		transition: width 0.5s;
+		font-size: 1rem;
+		color: $color__brand-white;
+		background: none;
+		text-transform: uppercase;
+		outline: none;
+
+		&:focus {
+			color: $color__brand-white;
+		}
+
+		&::placeholder {
+			color: $color__brand-yellow;
+		}
 	}
-}
 
-.search-field-show{
-color:$color__brand-white;
-	width:200px;
-
-}
-
-
-
-/*end of search form*/
-
-
-
-	.container{
+	.search-field-show {
+		color: $color__brand-white;
+		width: 200px;
+	}
+	/*end of search form*/
+	.container {
 		@include container;
-		 display:flex;
+		display: flex;
 		justify-content: space-between;
 	}
 
 	ul {
-		display:flex;
+		display: flex;
 		text-transform: uppercase;
 		flex-flow: row nowrap;
 		list-style: none;
 		align-items: center;
 
-
-
 		ul {
-
-			// li:last-child{
-			// 	color:red;
-			// }
-		// 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		// 	float: left;
-		// 	position: absolute;
-		// 	top: $base__space-unit;
-		// 	left: -999rem;
-		// 	z-index: 99999;
-		//
-		//
-		// 	ul {
-		// 		left: -999rem;
-		// 		top: 0;
-		//
-		// 	}
-
 			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					// left: 100%;
-				}
+				&.focus > ul,
+				&:hover > ul {}
 			}
 
-			a {
-				// width: 200px;
-			}
+			.focus > a,
+			:hover > a {}
 
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
+			a.focus,
+			a:hover {}
 		}
-
-		li:hover > ul,
-		li.focus > ul {
-			// left: auto;
-		}
+		li: hover > ul,;
 	}
+
 	li {
-		// float: left;
-		// position: relative;
 		padding-right: 20px;
 
-		&:last-child{
+		&:last-child {
 			padding-right: 0;
 		}
 
-		&:hover > a,
-		&.focus > a {
-
-			color:$color__brand-yellow;
+		&.focus > a,
+		&:hover > a {
+			color: $color__brand-yellow;
 		}
 	}
+
 	a {
-		// display: block;
 		text-decoration: none;
 	}
 
-	.current_page_item > a,
 	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+	.current_page_ancestor > a,
+	.current_page_item > a {}
 }
-
-
 /* nav bar search form */
-
-.main-navigation{
-
-
-
-
-}
-
+.main-navigation {}
 /* Small menu. */
-.menu-toggle,
-.main-navigation ul {
-	// display: block;
-}
-
-// @media screen and (min-width: 768px) {
-// 	.menu-toggle {
-// 		display: none;
-// 	}
-// 	.main-navigation ul {
-// 		display: block;
-// 	}
-// }
-
 .comment-navigation,
-.posts-navigation,
-.post-navigation {
-
+.post-navigation,
+.posts-navigation {
 	.site-main & {
 		margin: 0 0 $base__space-unit;
 		overflow: hidden;
@@ -239,7 +161,7 @@ color:$color__brand-white;
 	}
 }
 
-.fix-to-top{
+.fix-to-top {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -247,40 +169,38 @@ color:$color__brand-white;
 	border-bottom: 1px solid $color__background-hr;
 	z-index: 1;
 
-	.logo{
-		content:url('../../images/inhabitent-logo-tent.svg');
+	.logo {
+		content: url('../../images/inhabitent-logo-tent.svg');
 	}
 
-	a{
+	a {
 		color: $color__brand-green;
 
-		&:hover{
+		&:hover {
+			color: black;
+		}
+	}
+
+	button {
+		box-shadow: none;
+		background: none;
+		font-size: 1rem;
+		color: $color__brand-green;
+
+		&:hover {
+			color: $color__brand-green;
+		}
+	}
+
+	.search-field {
+		color: $color__border-abbr;
+
+		&:focus {
 			color: black;
 		}
 
-
+		&::placeholder {
+			color: $color__brand-medium-grey;
+		}
 	}
-
-	button{
-		box-shadow:none;
-		background:none;
-		font-size: 1rem;
-		color:$color__brand-green;
-
-		&:hover{
-			color:$color__brand-green;
-		}
-
-		}
-
-		.search-field{
-			color:$color__border-abbr;
-			&:focus{
-				color:black;
-			}
-
-			&::placeholder{
-				color:$color__brand-medium-grey;
-			}
-		}
 }

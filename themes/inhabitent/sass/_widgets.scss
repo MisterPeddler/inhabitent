@@ -1,44 +1,38 @@
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-
-.textwidget{
+.textwidget {
 	font-family: $font__pre;
-	width:270px;
+	width: 270px;
 
-	div{
+	div {
 		padding: 8px 0;
 	}
-
 }
 
 .widget {
 	margin: 0 0 $base__space-unit;
-
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
 
-	p{
+	p {
 		font-family: $font__pre;
 	}
 }
-
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;
 }
 
-.widget_archive{
-
-	ul{
+.widget_archive {
+	ul {
 		list-style: none;
 		padding: 0;
 
-		li a{
+		li a {
 			text-decoration: none;
 		}
-
 	}
 }

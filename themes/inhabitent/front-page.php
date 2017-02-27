@@ -16,28 +16,26 @@ get_header(); ?>
 
   </section>
 
-<!-- more stuff goes here -> static content-->
 
 <section class="shop-stuff-section">
   <?php
-  $terms = get_terms( array(
+  $terms = get_terms(array(
       'taxonomy' => 'product_type',
       'hide_empty' => false,
-  ) );
+  ));
 
   ?>
 
 <h1 class="front-page-heading">SHOP STUFF</h1>
 <div class="shop-stuff-container">
 
-<?php foreach($terms as $item) :?>
+<?php foreach ($terms as $item) :?>
 
   <div class="shop-cat-item">
 
     <?php
     $imgUrl = get_template_directory_uri() . "/images/" . $item->slug . ".svg";
     $linkUrl = get_home_url() . "/product_type/" . $item->slug;
-    //echo $linkUrl;
     ?>
 
     <img src=" <?php echo $imgUrl ?> "/>
@@ -59,23 +57,23 @@ get_header(); ?>
 
   <?php
   $args = array(
-	'posts_per_page'   => 3,
-	'orderby'          => 'date',
-	'order'            => 'DESC',
+    'posts_per_page'   => 3,
+    'orderby'          => 'date',
+    'order'            => 'DESC',
 );
-  $news_feed_posts = get_posts( $args );
+  $news_feed_posts = get_posts($args);
 
-  foreach ( $news_feed_posts as $post):
+  foreach ($news_feed_posts as $post):
     setup_postdata($post);?>
 
   <div class="inhab-newsfeed-item">
 
-    <?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'medium' ); ?>
+    <?php if (has_post_thumbnail()) : ?>
+			<?php the_post_thumbnail('medium'); ?>
 		<?php endif; ?>
 
     <div class="content-box">
-      <div class="entry-meta"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></div>
+      <div class="entry-meta"><?php red_starter_posted_on(); ?> / <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?></div>
       <p><?php the_title() ?></p>
       <a class="inhab-button" href="<?php the_permalink() ?>">READ ENTRY</a>
     </div>
@@ -118,6 +116,8 @@ wp_reset_postdata(); ?>
 </div>
 
 <a class="green-button-style adventure-button" href="#">More Adventures</a>
+
+
 
 </section>
 <!-- </div> -->

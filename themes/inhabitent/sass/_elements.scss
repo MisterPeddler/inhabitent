@@ -1,40 +1,43 @@
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-
-
 html {
 	box-sizing: border-box;
 	@include font-size(1);
 	font-family: $font__pre;
 }
 
-a{
+a {
 	text-decoration: none;
-	cursor:pointer;
+	cursor: pointer;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
 	text-transform: uppercase;
-	 letter-spacing: 1px;
+	letter-spacing: 1px;
 }
 
 *,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after,
+*:before {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $color__background-body;
+	/* Fallback for when there is no custom background color defined. */
 	margin-top: -16px;
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: "" "";
 
-	&:before,
-	&:after {
+	&:after,
+	&:before {
 		content: "";
 	}
 }
@@ -46,10 +49,6 @@ hr {
 	margin-bottom: $base__space-unit;
 }
 
-ul, ol {
-	// margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
-
 ul {
 	list-style: disc;
 }
@@ -58,8 +57,8 @@ ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li > ol,
+li > ul {
 	margin-bottom: 0;
 	margin-left: $base__space-unit;
 }
@@ -73,8 +72,10 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
 }
 
 table {
@@ -82,10 +83,10 @@ table {
 	width: 100%;
 }
 
-.heavy{
+.heavy {
 	font-weight: bold;
 }
 
-.fa{
+.fa {
 	min-width: 25px;
 }

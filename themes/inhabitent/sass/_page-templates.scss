@@ -88,7 +88,6 @@
 }
 
 .hero {
-    // background-image: url('../../images/home-hero.jpg');
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url('../../images/home-hero.jpg');
     height: 100vh;
     background-size: cover;
@@ -146,7 +145,7 @@
 
         .inhab-newsfeed-item {
             width: 32%;
-            // paddisng:2px;
+
             img {
                 object-fit: cover;
                 width: 100%;
@@ -197,13 +196,12 @@
     height: 820px;
     @include container;
 
-    .adventure-button{
-      display:inline;
-      width:240px;
-      font-size: 1.2rem;
-      margin-top: 30px;
+    .adventure-button {
+        display: inline;
+        width: 240px;
+        font-size: 1.2rem;
+        margin-top: 30px;
     }
-
 
     .adventure-container {
         display: flex;
@@ -238,7 +236,6 @@
             }
         }
 
-
         .adventure-right-container {
             width: 50%;
             background-color: grey;
@@ -263,7 +260,7 @@
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url('../../images/mountain-hikers.jpg');
                 background-size: cover;
                 border-top: 10px solid white;
-                  border-right: 10px solid white;
+                border-right: 10px solid white;
 
                 h2 {
                     font-size: 1.5rem;
@@ -274,8 +271,8 @@
                 width: 50%;
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url('../../images/night-sky.jpg');
                 background-size: cover;
-                  border-top: 10px solid white;
-                    border-left: 10px solid white;
+                border-top: 10px solid white;
+                border-left: 10px solid white;
 
                 h2 {
                     font-size: 1.5rem;
@@ -325,7 +322,6 @@
         max-width: 560px;
         font-size: 2.2rem;
         line-height: 120%;
-        // font-family: $font__main;
         text-transform: uppercase;
     }
 
@@ -365,11 +361,6 @@
     .tags-links {
         padding-left: 20px;
     }
-    // .tag-links{
-    //   a{
-    //     color:$color__brand-green;
-    //   }
-    // }
 }
 /*single product pages*/
 .single-product-article {
