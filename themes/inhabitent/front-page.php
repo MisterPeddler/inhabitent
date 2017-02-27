@@ -96,23 +96,23 @@ wp_reset_postdata(); ?>
 <div class="adventure-container">
 <div class="adventure-left">
   <h2>Getting Back to Nature in a Canoe</h2>
-  <a href="#" class="inhab-button">READ MORE</a>
+  <a href="#" class="inhab-button-white">READ MORE</a>
 </div>
 
 <div class="adventure-right-container">
   <div class="adventure-top-right">
     <h2>A Night with Friends at the Beach</h2>
-    <a href="#" class="inhab-button">READ MORE</a>
+    <a href="#" class="inhab-button-white">READ MORE</a>
   </div>
 
   <div class="adventure-bottom-left">
     <h2>Taking in the View at Big Mountain</h2>
-    <a href="#" class="inhab-button">READ MORE</a>
+    <a href="#" class="inhab-button-white">READ MORE</a>
   </div>
 
   <div class="adventure-bottom-right">
     <h2>Star-Gazing at the Night Sky</h2>
-    <a href="#" class="inhab-button">READ MORE</a>
+    <a href="#" class="inhab-button-white">READ MORE</a>
   </div>
 </div>
 </div>

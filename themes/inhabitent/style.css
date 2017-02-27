@@ -691,8 +691,7 @@ a {
     background-color: #19625d;
     color: #fefefe; }
 
-/* Posts and pages */
-.inhab-button {
+.inhab-button, .inhab-button-white {
   text-transform: uppercase;
   border: 1px solid black;
   color: black;
@@ -700,11 +699,17 @@ a {
   padding: 12px 20px;
   font-family: "novecento";
   font-size: 0.9rem; }
-  .inhab-button:hover {
+  .inhab-button:hover, .inhab-button-white:hover {
     background-color: #248A83;
     color: #fefefe;
     border: 1px solid #248A83; }
 
+.inhab-button-white {
+  border: 1px solid white;
+  color: white;
+  margin-left: 20px; }
+
+/* Posts and pages */
 .sticky {
   display: block; }
 
@@ -895,8 +900,7 @@ object {
   .site-main.about .p1 {
     font-family: "merriweather";
     width: 800px;
-    margin: 0 auto;
-    margin-bottom: 20px; }
+    margin: 0 auto 20px; }
   .site-main.about .about.container {
     display: -ms-flexbox;
     display: flex;
@@ -1013,7 +1017,7 @@ object {
           color: #248A83; }
           .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box p:hover {
             color: black; }
-        .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button {
+        .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button, .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button-white {
           position: absolute;
           bottom: 10px;
           padding-top: 8px;
@@ -1034,11 +1038,22 @@ object {
     .latest-adventures .adventure-container h2 {
       display: block;
       padding-top: 10%; }
-    .latest-adventures .adventure-container .inhab-button {
+    .latest-adventures .adventure-container .inhab-button, .latest-adventures .adventure-container .inhab-button-white {
       margin-top: 20px; }
+    .latest-adventures .adventure-container h2 {
+      color: white;
+      font-family: "merriweather";
+      text-transform: none;
+      font-weight: lighter;
+      padding: 0 20px; }
     .latest-adventures .adventure-container .adventure-left {
       width: 50%;
-      background-color: darkgrey; }
+      background-color: darkgrey;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("../../images/canoe-girl.jpg");
+      background-size: cover;
+      border-right: 10px solid white; }
+      .latest-adventures .adventure-container .adventure-left h2 {
+        font-size: 3rem; }
     .latest-adventures .adventure-container .adventure-right-container {
       width: 50%;
       background-color: grey;
@@ -1047,13 +1062,31 @@ object {
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-flow: wrap;
-          flex-flow: wrap; }
+          flex-flow: wrap;
+      border-left: 10px solid white; }
       .latest-adventures .adventure-container .adventure-right-container .adventure-top-right {
-        width: 100%; }
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("../../images/beach-bonfire.jpg");
+        background-size: cover;
+        border-bottom: 10px solid white; }
+        .latest-adventures .adventure-container .adventure-right-container .adventure-top-right h2 {
+          font-size: 2.2rem; }
       .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-left {
-        width: 50%; }
+        width: 50%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("../../images/mountain-hikers.jpg");
+        background-size: cover;
+        border-top: 10px solid white;
+        border-right: 10px solid white; }
+        .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-left h2 {
+          font-size: 1.5rem; }
       .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-right {
-        width: 50%; }
+        width: 50%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("../../images/night-sky.jpg");
+        background-size: cover;
+        border-top: 10px solid white;
+        border-left: 10px solid white; }
+        .latest-adventures .adventure-container .adventure-right-container .adventure-bottom-right h2 {
+          font-size: 1.5rem; }
 
 /* Home page*/
 .site-main:first-child {
@@ -1091,7 +1124,7 @@ object {
     text-transform: uppercase; }
   .entry-header .entry-meta {
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 7px;
     padding: 2px 20px;
     font-size: 1.2rem;
@@ -1107,7 +1140,8 @@ object {
 
 .entry-footer {
   font-size: 1.1rem; }
-  .entry-footer .cat-links a, .entry-footer .tags-links a {
+  .entry-footer .cat-links a,
+  .entry-footer .tags-links a {
     color: #248A83; }
   .entry-footer .tags-links {
     padding-left: 20px; }
@@ -1150,7 +1184,8 @@ object {
 .find-us .site-main {
   padding-right: 60px; }
 
-.find-us input, .find-us textarea {
+.find-us input,
+.find-us textarea {
   background-color: #eee;
   border-radius: 0;
   font-family: "merriweather";
@@ -1190,7 +1225,7 @@ object {
   margin-bottom: 60px; }
   .search-results .entry-summary p {
     margin-top: 30px; }
-  .search-results .entry-summary .inhab-button {
+  .search-results .entry-summary .inhab-button, .search-results .entry-summary .inhab-button-white {
     margin-top: 40px; }
 
 .search-results .no-results .search-submit {
