@@ -197,6 +197,14 @@
     height: 820px;
     @include container;
 
+    .adventure-button{
+      display:inline;
+      width:240px;
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+
+
     .adventure-container {
         display: flex;
         height: 540px;
@@ -229,6 +237,7 @@
                 font-size: 3rem;
             }
         }
+
 
         .adventure-right-container {
             width: 50%;

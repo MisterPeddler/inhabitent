@@ -117,6 +117,8 @@ wp_reset_postdata(); ?>
 </div>
 </div>
 
+<a class="green-button-style adventure-button" href="#">More Adventures</a>
+
 </section>
 <!-- </div> -->
 

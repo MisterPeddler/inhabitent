@@ -1031,6 +1031,11 @@ object {
   height: 820px;
   width: 1120px;
   margin: 0 auto; }
+  .latest-adventures .adventure-button {
+    display: inline;
+    width: 240px;
+    font-size: 1.2rem;
+    margin-top: 30px; }
   .latest-adventures .adventure-container {
     display: -ms-flexbox;
     display: flex;
