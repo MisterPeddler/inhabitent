@@ -6,7 +6,7 @@
  */
 
 ?>
-this is single
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
@@ -32,5 +32,10 @@ this is single
 
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>
+		<div class="single-social-icons">
+		<a class = "inhab-button"><i class="fa fa-facebook" aria-hidden="true"></i>like</a>
+    <a class = "inhab-button"><i class="fa fa-twitter" aria-hidden="true"></i>tweet</a>
+    <a class = "inhab-button"><i class="fa fa-pinterest" aria-hidden="true"></i>pin</a>
+	</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

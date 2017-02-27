@@ -6,8 +6,7 @@
  */
 
 get_header(); ?>
-this is page
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area container  <?php echo basename(get_permalink());?>">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -17,8 +16,9 @@ this is page
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
-<!-- <?php get_sidebar(); ?> -->
+
 
 <?php get_footer(); ?>

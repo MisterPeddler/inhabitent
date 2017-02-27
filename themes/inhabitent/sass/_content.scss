@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 
+
 .green-button-style{
   background-color: $color__brand-green;
   color: $color__brand-white;
@@ -23,7 +24,9 @@
 	border: 1px solid black;
 	color:black;
 	text-decoration: none;
-	padding: 12px 18px;
+	padding: 12px 20px;
+  font-family: $font__main;
+  font-size: 0.9rem;
 
 	&:hover{
 		background-color: $color__brand-green;
@@ -71,7 +74,17 @@
 
 #secondary{
   border-left: 1px solid $color__background-hr;
-  padding-left: 80px;
+  padding-left: 50px;
+  padding-top: 100px;
+
+  a{
+    color: $color__brand-green;
+
+    &:hover{
+      color: $color__brand-purple;
+    }
+  }
+
 }
 
 
@@ -82,6 +95,7 @@
 
 	background-image: url('../../images/dark-wood.png');
   height:350px;
+  margin-top: 80px;
 
   .copyr{
     display: block;
@@ -92,7 +106,7 @@
 
 .container{
   font-family: $font__pre;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-top: 35px;
 	@include container;
 	display:flex;

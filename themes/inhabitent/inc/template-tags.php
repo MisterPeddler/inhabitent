@@ -159,7 +159,9 @@
  						'max_depth'  => $args['max_depth'],
  						'reply_text' => 'Reply &rarr;'
  					) ) ); ?>
+
  				</div><!-- .reply -->
+        <hr />
  			</div><!-- .comment-content -->
 
  		</article><!-- .comment-body -->

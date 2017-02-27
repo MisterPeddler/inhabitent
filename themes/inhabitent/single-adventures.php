@@ -7,7 +7,6 @@
 
  get_header(); ?>
 
-this is a single adventures page
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-this is the archive
+
 <div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -16,8 +16,11 @@ this is the archive
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
+
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
+
+				<hr />
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>

@@ -2,12 +2,26 @@
 # Widgets
 --------------------------------------------------------------*/
 
+.textwidget{
+	font-family: $font__pre;
+	width:270px;
+
+	div{
+		padding: 8px 0;
+	}
+
+}
+
 .widget {
 	margin: 0 0 $base__space-unit;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
+	}
+
+	p{
+		font-family: $font__pre;
 	}
 }
 

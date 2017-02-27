@@ -1,9 +1,9 @@
 (function($) {
 
 
-    var searchField = $('.search-field');
-    var searchForm = $('.search-form');
-    var searchSubmit = $('.search-submit');
+    var searchField = $('.nav-menu-holder .search-field');
+    var searchForm = $('.nav-menu-holder .search-form');
+    var searchSubmit = $('.nav-menu-holder .search-submit');
     var height = $(window).height();
 
 
@@ -25,7 +25,7 @@
     searchField.keypress(function(e) {
         if (e.which == 13) {
             e.preventDefault();
-            $('.search-form').trigger('submit');
+            searchForm.trigger('submit');
         }
 
     });
