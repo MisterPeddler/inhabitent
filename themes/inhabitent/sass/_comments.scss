@@ -49,7 +49,10 @@ form{
   input{
     width:100%;
     height:40px;
+
   }
+
+
 
   .comment-form-author{
     width:50%;
@@ -81,6 +84,8 @@ form{
     textarea, input{
       border-radius: 0;
       background-color: $color__background-pre;
+      font-family: $font__pre;
+      color:$color__text-main;
     }
 
     label{

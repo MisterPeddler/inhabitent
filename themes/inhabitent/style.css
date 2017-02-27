@@ -929,7 +929,7 @@ object {
   text-align: center; }
 
 .hero {
-  background-image: url("../../images/home-hero.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("../../images/home-hero.jpg");
   height: 100vh;
   background-size: cover;
   top: 0;
@@ -1193,18 +1193,18 @@ object {
   .search-results .entry-summary .inhab-button {
     margin-top: 40px; }
 
-.search-results .search-submit {
+.search-results .no-results .search-submit {
   display: none; }
 
-.search-results fieldset {
-  border: none; }
-
-.search-results input[type=search] {
+.search-results .no-results input[type=search] {
   background-color: #eee;
   border-radius: 0;
   font-family: "merriweather";
   color: #404040;
   padding: 6px; }
+
+.search-results fieldset {
+  border: none; }
 
 .error-404 {
   width: 815px; }
@@ -1335,7 +1335,9 @@ object {
 
 #comments textarea, #comments input {
   border-radius: 0;
-  background-color: #eee; }
+  background-color: #eee;
+  font-family: "merriweather";
+  color: #404040; }
 
 #comments label {
   display: block;

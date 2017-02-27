@@ -117,10 +117,11 @@ function update_hero_image() {
 				if(!is_page_template('page-templates/about.php')){return;}
 
 				$url = CFS()->get( 'about_header_image' );
-				//echo CFS()->get( 'about_header_image' );
 				if(!$url){return;}
 
-        $custom_styles = ".about-hero {background-image: url({$url});}";
+				$custom_styles = ".about-hero {
+					background:linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
+					url({$url});}";
 
         wp_add_inline_style( 'red-starter-style', $custom_styles );
 }

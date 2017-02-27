@@ -102,7 +102,8 @@
 }
 
 .hero {
-    background-image: url('../../images/home-hero.jpg');
+    // background-image: url('../../images/home-hero.jpg');
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url('../../images/home-hero.jpg');
     height: 100vh;
     background-size: cover;
     top: 0;
@@ -462,12 +463,10 @@ h1{
   }
 }
 
+.no-results {
+
 .search-submit{
   display:none;
-}
-
-fieldset{
-  border:none;
 }
 
 input[type=search]{
@@ -477,6 +476,14 @@ input[type=search]{
   color:$color__text-main;
   padding: 6px;
 }
+
+}
+
+fieldset{
+  border:none;
+}
+
+
 
 }
 
