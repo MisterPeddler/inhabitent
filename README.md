@@ -1,4 +1,4 @@
-# Aloha Shop
+# Inhabitent
 A full featured, multi-page site built on Wordpress.
 
 ![Inhabitent Screenshot](https://github.com/MisterPeddler/inhabitent/blob/master/themes/inhabitent/screenshot.png)
