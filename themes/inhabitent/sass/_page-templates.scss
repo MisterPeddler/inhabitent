@@ -283,7 +283,7 @@
 }
 /* Home page*/
 .site-main:first-child {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .container {
@@ -410,6 +410,11 @@
 
     .site-main {
         padding-right: 60px;
+    }
+
+    label{
+        font-family: $font__main;
+        text-transform: uppercase;
     }
 
     input,
