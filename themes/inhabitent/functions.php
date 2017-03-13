@@ -108,7 +108,7 @@ function red_starter_scripts()
     wp_enqueue_script('nav-bar', get_template_directory_uri() . '/js/navbar.js', array('jquery'), '1', true);
 
 
-    if (is_page_template('page-templates/about.php') || is_front_page()) {
+    if (is_singular('adventure') || is_page_template('page-templates/about.php') || is_front_page()) {
         wp_enqueue_script('sticky-nav', get_template_directory_uri() . '/js/sticky-nav.js', array('jquery'), '1', true);
     }
 }

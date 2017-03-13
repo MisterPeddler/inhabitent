@@ -28,7 +28,7 @@
 				</div><!-- .site-branding -->
 
 
-				<nav id="site-navigation" class="main-navigation<?php echo (is_page_template('single-adventure.php') || is_page_template('page-templates/about.php') || is_front_page()) ? ' ' : ' fix-to-top'?>" role="navigation">
+				<nav id="site-navigation" class="main-navigation<?php echo (is_singular( 'adventure' ) || is_page_template('page-templates/about.php') || is_front_page()) ? ' ' : ' fix-to-top'?>" role="navigation">
 						<div class="container">
 				  <a class="logo" href="<?php echo home_url() ?>"><img src="<?php echo get_template_directory_uri() ?>/images/inhabitent-logo-tent.svg"/></a>
 					<div class="nav-menu-holder">

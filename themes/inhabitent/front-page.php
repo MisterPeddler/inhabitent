@@ -10,7 +10,7 @@ get_header(); ?>
 
 <section class="front-page">
 
-  <section class="hero">
+  <section class="hero hero-image">
 
     <img src="<?php echo get_template_directory_uri() ?>/images/inhabitent-logo-full.svg"/>
 

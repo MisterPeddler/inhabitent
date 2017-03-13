@@ -929,7 +929,7 @@ object {
 /* About Page */
 .page-template-about {
   position: relative;
-  margin-top: -100px; }
+  margin-top: -80px; }
 
 .site-main.about {
   display: -ms-flexbox;

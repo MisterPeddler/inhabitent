@@ -1,7 +1,8 @@
 (function($) {
 
 
-    var height = $(window).height();
+    // var height = $(window).height();
+    var height = $('.hero-image').height();
 
 
 

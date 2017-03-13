@@ -11,7 +11,7 @@
 
 <section class="single-adventure">
 
-	<?php the_post_thumbnail('full', ['class' => 'adventure-hero']); ?>
+	<?php the_post_thumbnail('full', ['class' => 'adventure-hero hero-image']); ?>
 
 <div class="adventure-content">
 <h1><?php the_title(); ?></h1>
@@ -24,7 +24,6 @@ $theID = get_the_ID();
 <p class="author"> By <?php the_author_meta( 'display_name', $post->post_author ); ?></p>
 
 <p class="adventure-post-content"> <?php echo apply_filters('the_content', get_post_field('post_content', $theID)); ?> </p>
-
 
 <footer class="entry-footer">
 		<!-- <?php red_starter_entry_footer(); ?> -->
