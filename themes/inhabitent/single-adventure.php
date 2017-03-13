@@ -7,29 +7,37 @@
 
  get_header(); ?>
 
- <div> this is single adventure </div>
-<div class="container">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-		<?php while (have_posts()) : the_post(); ?>
 
-			<?php get_template_part('template-parts/content', 'single'); ?>
+<section class="single-adventure">
 
-			<?php the_post_navigation(); ?>
+	<?php the_post_thumbnail('full', ['class' => 'adventure-hero']); ?>
 
-			<?php
-                // If comments are open or we have at least one comment, load up the comment template.
-                if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif;
-            ?>
+<div class="adventure-content">
+<h1><?php the_title(); ?></h1>
 
-		<?php endwhile; // End of the loop.?>
+<?php
+global $post;
+$theID = get_the_ID();
+?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<p class="author"> By <?php the_author_meta( 'display_name', $post->post_author ); ?></p>
 
-<?php get_sidebar(); ?>
+<p class="adventure-post-content"> <?php echo apply_filters('the_content', get_post_field('post_content', $theID)); ?> </p>
+
+
+<footer class="entry-footer">
+		<!-- <?php red_starter_entry_footer(); ?> -->
+    <a class = "inhab-button"><i class="fa fa-facebook" aria-hidden="true"></i>like</a>
+    <a class = "inhab-button"><i class="fa fa-twitter" aria-hidden="true"></i>tweet</a>
+    <a class = "inhab-button"><i class="fa fa-pinterest" aria-hidden="true"></i>pin</a>
+	</footer><!-- .entry-footer -->
+
 </div>
+
+
+
+</section>
+	
+
 <?php get_footer(); ?>

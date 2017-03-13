@@ -576,3 +576,36 @@
         margin-top: 10px;
     }
 }
+
+
+
+.single-adventure{
+ 
+ .adventure-content{
+     width:800px;
+     margin:0 auto;
+ h1{
+    font-size:2.5rem;
+    margin-bottom:0;
+    }
+
+  
+
+     p{
+         font-family:$font__pre;
+       }
+
+        .author{
+         font-family:$font__main;
+       text-transform: uppercase;
+       font-size: 1.25rem;
+   }
+
+ }
+
+ .entry-footer{
+     margin-top:40px;
+ }
+
+   
+}
