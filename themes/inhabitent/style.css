@@ -730,7 +730,7 @@ a {
     background-color: #19625d;
     color: #fefefe; }
 
-.inhab-button, .inhab-button-white, .latest-adventures .adventure-button {
+.inhab-button, .inhab-button-white, .latest-adventures .adventure-button, .adventure-archive .adventure-button {
   text-transform: uppercase;
   border: 1px solid black;
   color: black;
@@ -738,7 +738,7 @@ a {
   padding: 12px 20px;
   font-family: "novecento";
   font-size: 0.9rem; }
-  .inhab-button:hover, .inhab-button-white:hover, .latest-adventures .adventure-button:hover {
+  .inhab-button:hover, .inhab-button-white:hover, .latest-adventures .adventure-button:hover, .adventure-archive .adventure-button:hover {
     background-color: #248A83;
     color: #fefefe;
     border: 1px solid #248A83; }
@@ -1056,7 +1056,7 @@ object {
           color: #248A83; }
           .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box p:hover {
             color: black; }
-        .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button, .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button-white, .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .latest-adventures .adventure-button, .latest-adventures .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .adventure-button {
+        .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button, .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .inhab-button-white, .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .latest-adventures .adventure-button, .latest-adventures .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .adventure-button, .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .adventure-archive .adventure-button, .adventure-archive .inhab-newsfeed-section .inhab-newsfeed-container .inhab-newsfeed-item .content-box .adventure-button {
           position: absolute;
           bottom: 10px;
           padding-top: 8px;
@@ -1227,6 +1227,64 @@ object {
     .single-product-article .product-info-container .entry-footer {
       margin-top: 30px; }
 
+.adventure-archive {
+  width: 1120px;
+  margin: 0 auto; }
+  .adventure-archive h1 {
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 35px;
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+    border-bottom: 1px dashed lightgrey; }
+  .adventure-archive .adventure-button {
+    border: white solid 1px;
+    color: white; }
+  .adventure-archive ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    padding: 0;
+    height: 1120px; }
+    .adventure-archive ul li {
+      position: relative;
+      width: 550px;
+      height: 550px; }
+      .adventure-archive ul li img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%; }
+      .adventure-archive ul li .image-shader {
+        background: black;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.3; }
+      .adventure-archive ul li p {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        color: white;
+        font-family: "merriweather";
+        font-size: 2.8rem;
+        line-height: 1.3;
+        padding-right: 20px; }
+      .adventure-archive ul li .adventure-button {
+        position: absolute;
+        top: 35%;
+        left: 30px; }
+
 /*find us*/
 .find-us .entry-title {
   margin-top: 0;
@@ -1283,7 +1341,7 @@ object {
   margin-bottom: 60px; }
   .search-results .entry-summary p {
     margin-top: 30px; }
-  .search-results .entry-summary .inhab-button, .search-results .entry-summary .inhab-button-white, .search-results .entry-summary .latest-adventures .adventure-button, .latest-adventures .search-results .entry-summary .adventure-button {
+  .search-results .entry-summary .inhab-button, .search-results .entry-summary .inhab-button-white, .search-results .entry-summary .latest-adventures .adventure-button, .latest-adventures .search-results .entry-summary .adventure-button, .search-results .entry-summary .adventure-archive .adventure-button, .adventure-archive .search-results .entry-summary .adventure-button {
     margin-top: 40px; }
 
 .search-results .no-results .search-submit {

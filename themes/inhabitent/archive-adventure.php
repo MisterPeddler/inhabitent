@@ -7,40 +7,31 @@
 
 get_header(); ?>
 
-<div class="container">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-		<?php if (have_posts()) : ?>
 
-			<header class="page-header">
-			<h1>LATEST ADVENTURES</h1>
-			</header><!-- .page-header -->
+<div class="adventure-archive">
 
-			<?php /* Start the Loop */ ?>
-			<div class="adventure-archive-container">
+<h1>LATEST ADVENTURES</h1>
 
-			<?php while (have_posts()) : the_post(); ?>
+  <?php $loop = new WP_Query( 
+  array( 'post_type' => 'adventure', 
+  'posts_per_page' => -1,
+  'orderby' => 'date',
+  'order'=> 'ASC')); ?>
 
-				<div class="adventure">
-				PUT STUFF HERE ON SUNDAY
-				</div>
+  
+  <ul class="adventure-container-index">
 
-			<?php endwhile; ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <li class="adventure-item">
+        <?php the_post_thumbnail('large'); ?>
+        <div class="image-shader"></div>
+        <p><?php the_title();?></p>
+        <a class="adventure-button" href="<?php the_permalink() ?>">Read More</a>
+      </li>
+    <?php endwhile; wp_reset_query(); ?>
 
-			</div>
+  </ul>
 
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part('template-parts/content', 'none'); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
